@@ -1,0 +1,8 @@
+<p *ngIf="isLoading">
+  Cargando... por favor espere.
+</p>
+<div *ngIf="!isLoading">
+  <h2 class="title">Lista de lanzamientos (onPush Change Detection Strategy)</h2>
+  <dcm-search [values]="values" (optionChange)="optionChange($event)" (valueChange)="valueChange($event)"></dcm-search>
+  <dcm-display [launches]="launches"></dcm-display>
+</div>
